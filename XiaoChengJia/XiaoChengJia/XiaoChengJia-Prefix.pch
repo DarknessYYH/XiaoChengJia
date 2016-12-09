@@ -1,0 +1,74 @@
+
+
+#ifdef __OBJC__   //oc语言
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Availability.h>
+#import "NSString+Expand.h"
+#import "UIView+Expand.h"
+
+
+#ifdef DEBUG
+//#define YLog(...) NSLog(__VA_ARGS__);  //普通输出
+//反斜杆是为了换行
+#define YLog(fmt, ...) \
+NSLog((@"%s," "[lineNum:%d]" fmt) , __FUNCTION__, __LINE__, ##__VA_ARGS__); //输出带函数名和行数
+#else
+#define YLog(...);
+#endif
+#endif
+//----------------------------------------------------
+#pragma mark - 微博
+#define kAppKey @"3820087465"
+#define kAppSecret @"9eb31c82bc82e4f03d43e7708d34c239"
+#define kRedirectURL @"http://"
+#define kAPPType @"authorization_code"
+#define signURL @"https://api.weibo.com/oauth2/authorize?client_id=3820087465&redirect_uri=http://"
+#define BASE_TOKEN_URL  @"https://api.weibo.com/oauth2/access_token"
+#define kBaseURL @"https://api.weibo.com/2/users/show.json?"
+#define SEND_WEIBO_URL  @"https://api.weibo.com/2/statuses/update.json"
+#define SEND_WEIBO_WITH_IMAGE_URL   @"https://upload.api.weibo.com/2/statuses/upload.json"
+
+//----------------------------------------------------
+#pragma mark - CleanCloud
+#define HOT_STORE_PATH  @"classes/hotstore"
+#define BASEURL @"https://leancloud.cn/1.1"
+#define IMAGE_BASE_URL   @"https://leancloud.cn/1.1/hotstore"
+#define AVOS_APP_ID     @"INSWGuEPEypPQGPcK13ObQHK-gzGzoHsz"
+#define AVOS_APP_KEY    @"iWI8I6lGQeitewcqAWxg3WTs"
+#define AVOS_MASTER_KEY @"HHUYeXIyiaAMmb3AnCySsD96"
+
+#pragma mark - 配置
+//数据库路径
+#define FMDB_FILE_PATH   [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"YYH.sqlite"]
+//用户信息
+#define WB_ACCOUNT_FILE_PATH   [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.arch"]
+
+#define kColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define kAppMainColor kColor(53, 184, 174)
+
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SYSTEM_WITH  [UIScreen mainScreen].bounds.size.width - 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

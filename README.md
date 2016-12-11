@@ -1,7 +1,7 @@
 # XiaoChengJia
 
 
-技术要点：\<br>
+技术要点：<br>
 1.利用MVC模式，降低了代码之间的耦合度；\<br>
 2.使用AFNetworking第三方框架进行网络请求、数据传输。\<br>
 3.利用SDWebImage框架实现网络图片请求以及缓存；\<br>
